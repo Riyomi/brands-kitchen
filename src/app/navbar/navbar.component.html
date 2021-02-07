@@ -30,9 +30,15 @@
 </p>
 
 <mat-menu #settings="matMenu">
-  <button mat-menu-item>
-    <mat-icon>nights_stay</mat-icon>
-    <span>Dark mode</span>
-    <!-- <mat-slide-toggle>  </mat-slide-toggle> -->
+  <button mat-menu-item (click)="changeTheme()">
+    <div *ngIf="!theme; else darkModeActive">
+      <mat-icon>nights_stay</mat-icon>
+      <span>Dark mode</span>
+    </div>
+
+    <ng-template #darkModeActive>
+      <mat-icon>wb_sunny</mat-icon>
+      <span>Light mode</span>
+    </ng-template>
   </button>
 </mat-menu>
