@@ -1,0 +1,38 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-button>
+      <mat-icon>microwave</mat-icon>
+      Brand's Kitchen
+    </button>
+    <button mat-button>Menu</button>
+    <button mat-button>Recipes</button>
+    <button mat-button>Blog</button>
+    <span class="spacer"></span>
+    <button mat-button>
+      <mat-icon>account_circle</mat-icon>
+      Account
+    </button>
+    <button mat-button>
+      <mat-icon
+        matBadge="3"
+        matBadgePosition="before"
+        matBadgeColor="accent"
+        matBadgeSize="small"
+        >shopping_cart</mat-icon
+      >
+      Cart
+    </button>
+    <button mat-button [matMenuTriggerFor]="settings">
+      <mat-icon>settings</mat-icon>
+      Settings
+    </button>
+  </mat-toolbar>
+</p>
+
+<mat-menu #settings="matMenu">
+  <button mat-menu-item>
+    <mat-icon>nights_stay</mat-icon>
+    <span>Dark mode</span>
+    <!-- <mat-slide-toggle>  </mat-slide-toggle> -->
+  </button>
+</mat-menu>
